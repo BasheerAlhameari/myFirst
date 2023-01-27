@@ -1,0 +1,148 @@
+/* desplay inline  الى  desplay block  يحولون العنصر  fixed and absolute      */
+/*
+    1- common styles
+    2- general styles
+    3- sections
+        3.0 header section
+        3.1 home section 
+        3.2 about section 
+        3.3 portfolio section 
+        3.4 service section 
+        3.5 prices section 
+        3.6 team section 
+        3.7 blog section 
+        3.8 contact section
+        3.9 footer section 
+
+*/
+/* 1- common */
+/*
+    container
+    overlay
+    opacity hover
+    section header
+    section padding
+    hover effect 1 (lift to right)
+    hover effect 2 (top to botton)
+*/
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.7);
+
+}
+.hover-opacity{
+    transition: opacity .5s 
+}
+.hover-opacity:hover{
+    opacity: 0.8; /* شفافية في البوتون عند المرور علية حركاات */
+}
+/* 2- general css styles */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /* badding عدم اضافة عرض للصافحة عند عملية  */
+}
+.container{
+    width: 80%;
+    /*height: 20px;
+    background: red;*/
+    margin: auto;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+/* 3.0 header section */
+
+.header{
+    
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.header-content{
+overflow: hidden;
+}
+.header .logo{
+    width: 30%;
+    float: left;/*  القايمة بنفس السطر معا الصورة لوج*/
+}
+.header .nav{
+    width: 60%;
+    float: left;
+    text-align: right;
+    list-style: none;/* يشيل النقاط السوداء الي قدام الروابط الي في الراس */
+}
+.header .nav li{
+    display: inline-block;
+    width: 85px;
+    text-align: center;
+    padding-left: 10;
+    padding-right: 10;
+}
+.header .nav li a{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    /*padding: 25px 15px;
+    padding-left: 10;
+    padding-right: 10;*/
+}
+/*home section */
+.home{
+    height: 100vh;
+    background-image: url(../images/gpu.jpg);
+    /*background-position: center;*/
+    background-size: cover;
+    position: relative;
+}
+.home-content{
+    /*background: gray;*/
+    position: absolute;
+    width: 65%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.home .title{
+    color:white;
+    font-size: 35px;
+    text-transform: uppercase; /* تحويل الحروف الصغيرة الى كبيرة */
+}
+.home-desc{
+    margin: 20px 0;
+    color: white;
+    letter-spacing: 2px; /* مسافة بين الحروف */
+    line-height: 1.5; /* مسافة بين السطور */
+}
+.home .btn{
+    min-width: 160px;
+    padding: 15px 0;
+    border-radius: 5px;/* تغير حالة البوتون اركانة من مربع الى منحرف */
+    border: 0;
+    cursor: pointer; /* تغير حالة الموس الى شكل يد */
+    font-size: 20px;
+
+}
+.home .btn-start{
+    margin-right: 10px;
+    background-color: aliceblue;
+}
+.home .btn-learn{
+    background-color: #6195ff;
+    color: #fff;
+}
+/*about section */
+/*portfolio section */
+/*service section */
+/*prices section */
+/*team section */
+/*blog section */
+/*contact section */
+
